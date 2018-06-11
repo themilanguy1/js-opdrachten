@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+    <script>
+            function fotoPrompt(melding) {
+                var naam = "Edwyn";
+                foto = prompt
+                alert ('Hallo ' + naam +':'+ ' Je klikte op ' + melding +' van de 3 afbeeldingen');
+            }
+    </script>
+    <script>
+            function operatorPrompt(operator) {
+                var getal1 = parseInt("10");
+                var getal2 = parseInt("20");
+                var totaal = (getal1 * getal2);
+                    alert(getal1 + " x " + getal2 + " = " + totaal);
+    
+                var getal3 = parseInt("30");
+                var totaal = (getal1 * getal2 - getal3);
+                    alert(getal1 + " x " + getal2 + " - " + getal3 + " = " + totaal);
+            }
+        </script>
+        <script>
+                function uitrekenen() {
+                    var a = parseInt(window.document.getElementById("box").value, 10);
+                    var b = parseInt(window.document.getElementById("box2").value, 10);
+                    var totaal = a * b;
+                        alert(totaal);
+                }
+        </script>
+        <script>
+            function Achtergrondkleur(mijnkleur) {
+                window.document.bgColor = mijnkleur;
+            }
+        </script>
+        <script>
+            function optellen() {
+                var eerste;
+                var tweede;
+                var resultaat;
+                eerste = parseFloat(document.rekenmachine.cijfer.value);
+                tweede = parseFloat(document.rekenmachine.cijfer2.value);
+                resultaat = eerste + tweede;
+                alert("Het resultaat is: "+resultaat);
+                document.rekenmachine.antwoord.value = resultaat;
+            }
+        </script>
+        <script>
+                function aftrekken() {
+                    var eerste;
+                    var tweede;
+                    var resultaat;
+                    eerste = parseFloat(document.rekenmachine.cijfer.value);
+                    tweede = parseFloat(document.rekenmachine.cijfer2.value);
+                    resultaat = eerste - tweede;
+                    alert("Het resultaat is: "+resultaat);
+                    document.rekenmachine.antwoord.value = resultaat;
+                }
+        </script>
+        <script>
+            function vermenigvuldigen() {
+                var eerste;
+                var tweede;
+                var resultaat;
+                eerste = parseFloat(document.rekenmachine.cijfer.value);
+                tweede = parseFloat(document.rekenmachine.cijfer2.value);
+                resultaat = eerste * tweede;
+                alert("Het resultaat is: "+resultaat);
+                document.rekenmachine.antwoord.value = resultaat;
+            }
+        </script>
+        <script>
+            function gedeelddoor() {
+                var eerste;
+                var tweede;
+                var resultaat;
+                eerste = parseFloat(document.rekenmachine.cijfer.value);
+                tweede = parseFloat(document.rekenmachine.cijfer2.value);
+                resultaat = eerste / tweede;
+                alert("Het resultaat is: "+resultaat);
+                document.rekenmachine.antwoord.value = resultaat;
+            }
+        </script>
+    
+</head>
+<body>
+    <h2> Opdracht 1 </h2>
+    <a href="javascript:fotoPrompt ('1')"> <img src = "https://goo.gl/Vxh6tu"></a>
+    <a href="javascript:fotoPrompt ('2')"> <img src = "https://goo.gl/TeU3Qv"></a>
+    <a href="javascript:fotoPrompt ('3')"> <img src = "https://goo.gl/9v3MzM"></a>
+
+    <h2> Opdracht 2 </h2>
+    <a href="javascript:operatorPrompt()">Klik hier</a>
+
+    <form name="formulier">
+        <input type="text" id="box">
+        <input type="text" id="box2">
+        <input type="button" value="Reken" onclick="uitrekenen()">
+    </form>
+    
+    <h2>Opdracht 3</h2>
+    <a href="javascript:Achtergrondkleur('red')">Rood</a>
+    <a href="javascript:Achtergrondkleur('green')">Groen</a>
+    <a href="javascript:Achtergrondkleur('blue')">Blauw</a>
+    <a href="javascript:Achtergrondkleur('purple')">Paars</a>
+    <a href="javascript:Achtergrondkleur('yellow')">Geel</a>
+    <a href="javascript:Achtergrondkleur('brown')">Bruin</a>
+    <a href="javascript:Achtergrondkleur('pink')">Roze</a>
+    <br> <br>
+
+    <a href="#">
+        <img src="https://goo.gl/fH9PS1" width="400" height="300" border="0" onmouseover="Achtergrondkleur('red')" onmouseout="Achtergrondkleur('white')">
+        <img src="https://goo.gl/Vs4x6V" width="400" height="300" border="0" onmouseover="Achtergrondkleur('purple')" onmouseout="Achtergrondkleur('white')">
+        <img src="https://goo.gl/MU9t2E" width="400" height="300" border="0" onmouseover="Achtergrondkleur('green')" onmouseout="Achtergrondkleur('white')">
+        <img src="https://goo.gl/TZzz1t" width="400" height="300" border="0" onmouseover="Achtergrondkleur('gold')" onmouseout="Achtergrondkleur('white')">
+    </a>
+
+    <h2>Opdracht 4</h2>
+    <form name="rekenmachine" method="post" action="">
+        <input type="text" name="cijfer" id="cijfer">
+        <input type="text" name="cijfer2" id="cijfer2">
+        <input type="button" name="plus" id="plus" value="+" onClick="optellen()">
+        <input type="button" name="min" id="min" value="-" onClick="aftrekken()">
+        <input type="button" name="keren" id="keren" value="*" onClick="vermenigvuldigen()">
+        <input type="button" name="delen" id="delen" value="/" onClick="gedeelddoor()">
+    </form>
+
+    <h2>Opdracht 5</h2>
+    
+
+</body>
+</html>

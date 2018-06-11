@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript opdrachten</title>
+    <link type="text/css" rel="stylesheet" href="JS_opdrachten.css">
+    <link type="text/css" rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div id="wrapperdiv">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Javascript opdrachten</h2>
+                </div>
+                <div class="col-md-12">
+                    <h3 class="opdrtitel">Opdracht 1:</h3>
+                </div>
+                <div class="col-md-4">
+                    <a href="javascript:fotoPrompt ('1')"> <img class="img embed-responsive" src = "suicideman.jpg"></a>
+                </div>
+                <div class="col-md-4">
+                        <a href="javascript:fotoPrompt ('2')"> <img class="img embed-responsive" src = "suicideman2.jpg"></a>
+                </div>
+                <div class="col-md-4">
+                        <a href="javascript:fotoPrompt ('3')"> <img class="img embed-responsive" src = "suicideman3.jpg"></a>
+                </div>    
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="opdrtitel">Opdracht 2:</h3>
+                </div>
+                <div class="col-md-12">
+                    <form name="formulier">
+                        <input type="number" id="box">
+                        <input type="number" id="box2">
+                        <input type="button" value="Reken" onclick="uitrekenen()">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">   
+                <div class="col-md-12">
+                    <h3 class="opdrtitel">Opdracht 3:</h3>
+                </div>
+                <div class="col-md-12 links">
+                    <a href="javascript:Achtergrondkleur('red')"><button class="btn btn-primary">Rood</button></a>
+                    <a href="javascript:Achtergrondkleur('green')"><button class="btn btn-primary">Groen</button></a>
+                    <a href="javascript:Achtergrondkleur('blue')"><button class="btn btn-primary">Blauw</button></a>
+                    <a href="javascript:Achtergrondkleur('purple')"><button class="btn btn-primary">Paars</button></a>
+                    <a href="javascript:Achtergrondkleur('yellow')"><button class="btn btn-primary">Geel</button></a>
+                    <a href="javascript:Achtergrondkleur('brown')"><button class="btn btn-primary">Brown</button></a>
+                    <a href="javascript:Achtergrondkleur('pink')"><button class="btn btn-primary">Rose</button></a>
+                </div>
+            </div>
+                  
+            <div class="row"> 
+                <div class="col-md-3">
+                    <img src="https://vignette.wikia.nocookie.net/clubpenguin/images/2/2d/Red_Color.png/revision/latest?cb=20121228151659" class="img-fluid" onmouseover="Achtergrondkleur('red')" onmouseout="Achtergrondkleur('white')">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://i5.walmartimages.com/asr/c8b47934-0504-46c1-a394-74937022a5e6_1.465650240eea43e22811a59dbd0d6888.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF" class="img-fluid" onmouseover="Achtergrondkleur('purple')" onmouseout="Achtergrondkleur('white')">
+                </div>
+                <div class="col-md-3">
+                    <img src="http://i0.kym-cdn.com/entries/icons/mobile/000/025/461/ms_green_mms_on_couch.jpg" class="img-fluid" onmouseover="Achtergrondkleur('green')" onmouseout="Achtergrondkleur('white')">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCExBKr_NqvUbOQ-JyotfARxCienSmQZMyX1qEl_xL17J1yIGOnA" class="img-fluid" onmouseover="Achtergrondkleur('gold')" onmouseout="Achtergrondkleur('white')">
+                </div>
+            </div>
+
+            </div class="row">   
+                <div class="col-md-12">
+                    <h3 class="opdrtitel">Opdracht 4:</h3>
+                </div>
+                <div class="col-md-12">
+                    <form name="rekenmachine" method="post" action="">
+                        <input type="text" name="cijfer" id="cijfer">
+                        <input type="text" name="cijfer2" id="cijfer2">
+                        <input type="button" name="plus" id="plus" value="+" onClick="optellen()">
+                        <input type="button" name="min" id="min" value="-" onClick="aftrekken()">
+                        <input type="button" name="keren" id="keren" value="*" onClick="vermenigvuldigen()">
+                        <input type="button" name="delen" id="delen" value="/" onClick="gedeelddoor()">
+                    </form>
+                </div>
+            </div>
+                    <h2>Opdracht 5</h2>
+            </div>
+        </div>
+
+
+        <!-- javascript -->
+        <script>
+            function fotoPrompt(melding) {
+                var naam = "Gebruiker";
+                foto = prompt;
+                alert('Hallo ' + naam +':'+ ' Je klikte op #' + melding +' van de 3 afbeeldingen');
+            }
+        </script>
+        <script>
+            function uitrekenen() {
+                var a = parseInt(window.document.getElementById("box").value, 10);
+                var b = parseInt(window.document.getElementById("box2").value, 10);
+                var subtotaal = a * b;
+                alert('totaal is: '+ a + ' * '+ b +' = ' + subtotaal);
+                var c = prompt("Vul aub nog een nummer in om het vorige totaal mee te vermenigvuldigen.", "");
+                var totaal = subtotaal * c;
+                alert("totaal is nu: "+totaal);
+            }
+        </script>
+        <script>
+            function Achtergrondkleur(mijnkleur) {
+                document.getElementById("wrapperdiv").style.backgroundColor = mijnkleur;
+            }
+        </script>
+        <!-- <script>
+            function optellen() {
+                var eerste;
+                var tweede;
+                var resultaat;
+                eerste = parseFloat(document.rekenmachine.cijfer.value);
+                tweede = parseFloat(document.rekenmachine.cijfer2.value);
+                resultaat = eerste + tweede;
+                alert("Het resultaat is: "+resultaat);
+                document.rekenmachine.antwoord.value = resultaat;
+            }
+        </script>
+        <script>
+                function aftrekken() {
+                    var eerste;
+                    var tweede;
+                    var resultaat;
+                    eerste = parseFloat(document.rekenmachine.cijfer.value);
+                    tweede = parseFloat(document.rekenmachine.cijfer2.value);
+                    resultaat = eerste - tweede;
+                    alert("Het resultaat is: "+resultaat);
+                    document.rekenmachine.antwoord.value = resultaat;
+                }
+        </script>
+        <script>
+            function vermenigvuldigen() {
+                var eerste;
+                var tweede;
+                var resultaat;
+                eerste = parseFloat(document.rekenmachine.cijfer.value);
+                tweede = parseFloat(document.rekenmachine.cijfer2.value);
+                resultaat = eerste * tweede;
+                alert("Het resultaat is: "+resultaat);
+                document.rekenmachine.antwoord.value = resultaat;
+            }
+        </script>
+        <script>
+            function gedeelddoor() {
+                var eerste;
+                var tweede;
+                var resultaat;
+                eerste = parseFloat(document.rekenmachine.cijfer.value);
+                tweede = parseFloat(document.rekenmachine.cijfer2.value);
+                resultaat = eerste / tweede;
+                alert("Het resultaat is: "+resultaat);
+                document.rekenmachine.antwoord.value = resultaat;
+            }
+        </script> -->
+    </div>  
+</body>
+</html>
