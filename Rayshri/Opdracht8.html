@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+        <SCRIPT language="Javascript">
+            function Sourcezien(naam)
+            {
+                window.document.mijnformulier.input.value = window.document.image['pic1'].src;
+                alert('')
+            }
+
+            function aantalplaatjes() 
+            {
+                var aantal = window.document.images.length;
+            }
+         
+
+        </SCRIPT>
+    <body>
+        <a href = "#" onMouseOver="Sourcezien(0);"><img src="http://www.dancyfood.nl/wp-content/uploads/2013/07/watermelons.jpg" border="0" height="125" width="125" name="pic1" </a>
+        <a href = "#" onMouseOver="Sourcezien(1);"><img src="https://media.nu.nl/m/m1nxemganxcw_wd640.jpeg" border="0" height="125" width="125" name="pic2" </a>
+        <a href = "#" onMouseOver="Sourcezien(2);"><img src="https://www.puurfiguur.nl/wp-content/uploads/2015/10/druiven-1014x410.jpg" border="0" height="125" width="125" name="pic3" </a>
+
+        <form name = "mijnformulier">
+            <input type="text" name="input" value ="" size =70>
+        </form>
+        <a href ="javascript:aantalplaatjes()">Klik hier</a>
+        <footer> <p> &copy; Rayshri Soochitsingh 1G 2018. </p> </footer>
+    </body>
+</html>

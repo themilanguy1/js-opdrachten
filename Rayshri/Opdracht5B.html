@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+        
+    <body>
+        <form name="form" method="post" action=""> 
+            <input type="text" name="getal" id="getal" placeholder="Vul getal in..">
+            <input type="button" name="Klik hier" value="Klik hier" onClick="Ifstatement('form')">
+        </form>
+     
+        
+        <footer> <p> &copy; Rayshri Soochitsingh 1G 2018. </p> </footer>
+        <SCRIPT language="Javascript">
+                function Ifstatement(form)
+                {
+                    
+                    var x = parseFloat(document.form.getal.value);
+                    if (x == 100) 
+                    {
+                        alert("Bingo! je getal is exact 100");
+                        document.body.style.backgroundColor = 'red';
+                        
+                    }
+                    else if(x < 100)
+                    {
+                        alert("Je getal is " + x);
+                        document.body.style.backgroundColor = 'orange';
+                    }
+                    else if (x > 100 && x < 500)
+                    {
+                        alert("Je getal is groter dan 100");
+                        document.body.style.backgroundColor = 'green';
+                        
+                    } 
+                    else if (x => 500)
+                    {
+                        alert("Je getal is te groot begin opnieuw");
+                        document.body.style.backgroundColor = 'blue';
+                        prompt("Vul een lagere getal in: " );
+                 
+                    }
+                    else {
+                        alert("Dit is niet zo best");
+                    }
+                    }   
+                    Ifstatement();
+            </SCRIPT>
+  
+    </body>
+</html> 
+
+
+    

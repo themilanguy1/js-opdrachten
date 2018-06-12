@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+        <SCRIPT language="Javascript">
+            function Ifstatement(form)
+            {
+            
+                var x = parseFloat(document.form.getal.value);
+                if (x == 100) 
+                {
+                    alert("Bingo! je getal is exact 100");
+                }
+                else
+                {
+                if (x < 100)
+                {
+                    alert("Je getal is " + x);
+                }
+                else
+                {
+                if (x > 100)
+                {
+                    alert("Je getal is te groot voor me");
+                }    
+                }
+                }
+            }
+   
+        </SCRIPT>
+    <body>
+        <form name="form" method="post" action=""> 
+            <input type="text" name="getal" id="getal" placeholder="Vul getal in..">
+            <input type="button" name="Klik hier" value="Klik hier" onClick="Ifstatement('form')">
+        </form>
+     
+        
+        <footer> <p> &copy; Rayshri Soochitsingh 1G 2018. </p> </footer>
+    </body>
+</html> 
